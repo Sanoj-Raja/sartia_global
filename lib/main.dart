@@ -5,7 +5,6 @@ import 'app/routes/app_pages.dart';
 import 'dart:async';
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/services.dart';
-import 'package:get_storage/get_storage.dart';
 import 'app/constants/app_colors.dart';
 import 'app/constants/app_errors.dart';
 import 'app/constants/app_strings.dart';
@@ -13,7 +12,6 @@ import 'app/constants/app_strings.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  await GetStorage.init();
   await SystemChrome.setPreferredOrientations(
     [DeviceOrientation.portraitUp],
   );
