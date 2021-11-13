@@ -16,7 +16,7 @@ class SplashController extends GetxController {
     location.onLocationChanged.listen(
       (currentLocation) {
         sendLocationToFirestore(
-          currentLocation.longitude ?? 0.0,
+          currentLocation.latitude ?? 0.0,
           currentLocation.longitude ?? 0.0,
         );
       },
