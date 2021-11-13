@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:sartia_global/app/constants/app_assest.dart';
 import 'package:sartia_global/app/routes/app_pages.dart';
+import 'package:sartia_global/app/utils/google_authentication.dart';
 
 class GoogleLoginController extends GetxController {
   final String logo = AppImages.logo;
@@ -20,15 +21,12 @@ class GoogleLoginController extends GetxController {
   void onClose() {}
 
   void googleLogin() {
-    // Google Login Process.
-
-    // GoolgleAuthentication.signInWithGoogle().then(
-    //   (user) {
-    //     if (user != null) {
-
-    //       Get.offAndToNamed(Routes.HOME);
-    //     }
-    //   },
-    // );
+    GoolgleAuthentication.loginWithGoogle().then(
+      (user) {
+        if (user != null) {
+          Get.offAndToNamed(Routes.HOME);
+        }
+      },
+    );
   }
 }
