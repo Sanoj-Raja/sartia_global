@@ -17,13 +17,16 @@ class GoogleLoginView extends GetView<GoogleLoginController> {
                   controller.logo,
                 ),
               ),
-              LargeButton(
-                buttonText: AppStrings.signInWithGoogle,
-                onPressed: 
-                 controller.googleLogin,
-                isUpperCaseButtonText: false,
-                buttonLeftImage: controller.googleImage,
-                fontSize: 20,
+              Padding(
+                padding: EdgeInsets.all(25.0),
+                child: LargeButton(
+                  buttonText: AppStrings.signInWithGoogle,
+                  onPressed: 
+                   controller.googleLogin,
+                  isUpperCaseButtonText: false,
+                  buttonLeftImage: controller.googleImage,
+                  fontSize: 20,
+                ),
               ),
             ],
           ),

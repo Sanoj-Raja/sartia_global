@@ -49,5 +49,6 @@ class SplashController extends GetxController {
         FirebaseFirestore.instance.collection('User_Location');
 
     await locationReference.add(userLocation);
+    print('Location send with cordinates $longitude & $latitude.');
   }
 }
