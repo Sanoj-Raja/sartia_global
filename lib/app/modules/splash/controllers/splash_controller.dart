@@ -20,7 +20,7 @@ class SplashController extends GetxController {
         if (user != null) {
           Get.offAndToNamed(Routes.HOME);
         } else
-          // Get.offAndToNamed(Routes.AUTH);
+          Get.offAndToNamed(Routes.GOOGLE_LOGIN);
           print('route');
       },
     );
